@@ -135,6 +135,8 @@ footer {
 
 /* Responsive */
 @media (max-width: 640px) {
+  
   #accueil h1 { font-size: 2rem; }
   nav { gap: 1rem; font-size: 0.8rem; }
 }
+
