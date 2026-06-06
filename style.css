@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'courier new', courier,monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shawdow: 0 0 20px #00ff00;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+p {
+  font-size: 1.3rem;
+  color: #00cc00;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00ff00; }
+  to { text-shadow: 0 0 30px #00ff00, 0 0 40px #00ff00;}
+}
