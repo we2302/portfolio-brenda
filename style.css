@@ -1,35 +1,140 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #000;
-  color: #00ff00;
-  font-family: 'courier new', courier,monospace;
+  background: #0a1a2a;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
   min-height: 100vh;
+}
+
+/* Menu */
+nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+nav a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Sections */
+section {
+  padding: 4rem 1.5rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* Accueil */
+#accueil {
+  text-align: center;
+  padding: 6rem 1.5rem;
+}
+
+#accueil h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #38bdf8;
+  line-height: 1.2;
+}
+
+#accueil p {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  color: #9ca3af;
+}
+
+/* Titres */
+h2 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #38bdf8;
+}
+
+/* Cartes Compétences */
+.competences-grid {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 0.75rem;
+}
+
+.carte {
+  background: #1a2f3a;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
   align-items: center;
-  padding: 20px;
+  gap: 0.75rem;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  transition: 0.3s;
+  color: #d1d5db;
 }
 
-h1 {
-  font-size: 3rem;
-  text-shawdow: 0 0 20px #00ff00;
-  margin-bottom: 20px;
-  letter-spacing: 5px;
-  animation: glow 2s ease-in-out infinite alternate;
+.carte:hover {
+  border-color: #38bdf8;
 }
 
-p {
-  font-size: 1.3rem;
-  color: #00cc00;
+.carte span:first-child {
+  font-size: 1.5rem;
 }
 
-@keyframes glow {
-  from { text-shadow: 0 0 10px #00ff00; }
-  to { text-shadow: 0 0 30px #00ff00, 0 0 40px #00ff00;}
+/* Carte Projet */
+.carte-projet {
+  background: #1a2f3a;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+}
+
+.carte-projet h3 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.type {
+  font-size: 0.9rem;
+  color: #7dd3fc;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact */
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin: 0.75rem 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  #accueil h1 { font-size: 2rem; }
+  nav { gap: 1rem; font-size: 0.8rem; }
 }
