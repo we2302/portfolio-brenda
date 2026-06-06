@@ -1,82 +1,278 @@
-export default function Home() {
-  return (
-    <main className="bg-[#0a1a2a] text-white min-h-screen">
-      
-      {/* Menu */}
-      <nav className="flex gap-8 justify-center p-6 text-gray-300 text-sm">
-        <a href="#accueil" className="hover:text-sky-400">Accueil</a>
-        <a href="#apropos" className="hover:text-sky-400">À propos</a>
-        <a href="#competences" className="hover:text-sky-400">Compétences</a>
-        <a href="#projets" className="hover:text-sky-400">Projets</a>
-        <a href="#contact" className="hover:text-sky-400">Contact</a>
-      </nav>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio Brenda Aurelia</title>
 
-      {/* Accueil */}
-      <section id="accueil" className="text-center py-24 px-6">
-        <h1 className="text-5xl font-bold text-sky-400">Salut, je suis<br/>Wegang Kenmoe Brenda Aurélia</h1>
-        <p className="mt-3 text-lg text-gray-400">Étudiante en Cybersécurité / L1 Informatique</p>
-      </section>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-      {/* À propos */}
-      <section id="apropos" className="px-6 py-16 max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4 text-sky-400">À propos</h2>
-        <p className="text-gray-300 leading-relaxed">
-          Étudiante passionnée par l'informatique et la cybersécurité. 
-          Je déteste les fraudes et je suis passionnée Par le hacking. 
-          Je me forme chaque jour pour comprendre, protéger et sécuriser 
-          les systèmes informatiques. Je fais beaucoup de pratique 
-          personnelle pour améliorer mes compétences.
-        </p>
-      </section>
-
-      {/* Compétences - Cartes bleu ciel */}
-      <section id="competences" className="px-6 py-16 max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-sky-400">Compétences</h2>
-        <div className="space-y-3">
-          <div className="bg-[#1a2f3a] p-4 rounded-lg flex items-center gap-3 border-sky-900/30 hover:border-sky-400 transition">
-            <span className="text-2xl">🐍</span>
-            <span>Python - Bases de programmation</span>
-          </div>
-          <div className="bg-[#1a2f3a] p-4 rounded-lg flex items-center gap-3 border-sky-900/30 hover:border-sky-400 transition">
-            <span className="text-2xl">🌐</span>
-            <span>HTML5 - Structure web</span>
-          </div>
-          <div className="bg-[#1a2f3a] p-4 rounded-lg flex items-center gap-3 border-sky-900/30 hover:border-sky-400 transition">
-            <span className="text-2xl">🎨</span>
-            <span>CSS3 - Design & Styles</span>
-          </div>
-          <div className="bg-[#1a2f3a] p-4 rounded-lg flex items-center gap-3 border-sky-900/30 hover:border-sky-400 transition">
-            <span className="text-2xl">💻</span>
-            <span>Linux - Terminal & Systèmes</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Projets */}
-      <section id="projets" className="px-6 py-16 max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-sky-400">Projets</h2>
-        <div className="bg-[#1a2f3a] border-sky-900/30 p-5 rounded-lg">
-          <h3 className="font-bold text-lg">Projet de l'école</h3>
-          <p className="text-sm text-sky-300 mb-2">Type projet: TP scolaire</p>
-          <p className="text-gray-300">Projet réalisé dans le cadre de ma formation L1 Informatique.</p>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section id="contact" className="px-6 py-16 text-center">
-        <h2 className="text-3xl font-bold mb-6 text-sky-400">Contact</h2>
-        <div className="space-y-3 text-lg text-gray-300">
-          <p>📱 671 803 807</p>
-          <p>📧 brendaaurelia699@gmail.com</p>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="text-center py-6 text-gray-500 text-sm border-t border-sky-900/30">
-        © 2026 Wegang Kenmoe Brenda Aurélia
-      </footer>
-
-    </main>
-  )
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
+body{
+  /* BLEU CIEL BRILLANT */
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9, #60a5fa);
+  color:#fff;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 50px;
+  background:rgba(0,0,0,0.25);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.nav-links{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#000;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.profile{
+  width:120px;
+  border-radius:50%;
+  margin-bottom:20px;
+  border:3px solid white;
+}
+
+.hero h1 span{
+  color:#000;
+}
+
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:10px 20px;
+  background:#000;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+.btn.outline{
+  background:transparent;
+  border:1px solid #000;
+}
+
+/* SECTIONS */
+.section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+/* ABOUT */
+.about-box{
+  max-width:800px;
+  margin:auto;
+  line-height:1.8;
+  background:rgba(0,0,0,0.15);
+  padding:20px;
+  border-radius:10px;
+}
+
+/* SKILLS */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+.skill{
+  background:rgba(0,0,0,0.2);
+  padding:20px;
+  border-radius:10px;
+}
+
+/* PROJECTS */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.project{
+  background:rgba(0,0,0,0.2);
+  padding:15px;
+  border-radius:10px;
+}
+
+.project img{
+  width:100%;
+  border-radius:10px;
+}
+
+/* CONTACT */
+.contact-box{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  gap:20px;
+  background:rgba(0,0,0,0.15);
+  padding:20px;
+  border-radius:10px;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  width:300px;
+}
+
+input,textarea{
+  padding:10px;
+  border:none;
+  border-radius:5px;
+}
+
+button{
+  padding:10px;
+  background:#000;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">Brenda Aurelia</div>
+
+  <ul class="nav-links">
+    <li><a href="#home">Accueil</a></li>
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#skills">Compétences</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</header>
+
+<section id="home" class="hero">
+  <div>
+    <img src="https://i.pravatar.cc/200" class="profile" alt="profil">
+
+    <h1>Bonjour, je suis <span>Brenda Aurelia</span></h1>
+    <p>Étudiante passionnée par le développement web, le design UI/UX et les solutions numériques.</p>
+
+    <div>
+      <a href="#" class="btn">Télécharger CV</a>
+      <a href="#contact" class="btn outline">Me contacter</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2>À Propos</h2>
+  <div class="about-box">
+
+    <p>
+      Je suis Brenda Aurelia, passionnée par la technologie et le développement numérique.
+    </p>
+
+    <p>
+      Mes objectifs sont de créer des sites web modernes, développer des applications mobiles,
+      comprendre les besoins des utilisateurs et proposer des solutions adaptées.
+    </p>
+
+    <p>
+      J’ai également un fort intérêt pour le design UI/UX, le HTML, et la conception d’interfaces
+      simples, élégantes et efficaces.
+    </p>
+
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <h2>Compétences</h2>
+
+  <div class="skills-grid">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">UI/UX Design</div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <h2>Projets</h2>
+
+  <div class="projects-grid">
+
+    <div class="project">
+      <img src="https://source.unsplash.com/400x250/?website" />
+      <h3>Site Web</h3>
+      <p>Projet de design moderne responsive.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+
+  <div class="contact-box">
+
+    <div>
+      <p><i class="fas fa-phone"></i> 671803807</p>
+      <p><i class="fas fa-envelope"></i> brendaaurelia699@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Cameroun</p>
+    </div>
+
+    <form>
+      <input type="text" placeholder="Nom">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button>Envoyer</button>
+    </form>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Brenda Aurelia - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
