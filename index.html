@@ -1,12 +1,82 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <title>Wegang Brenda - portfolio </title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>WEGANG BRENDA</h1>
-    <p>cybersecurite / Etudiante L1 Informatique</p>
-  </body>
-  </html>
+export default function Home() {
+  return (
+    <main className="bg-[#0a1a2a] text-white min-h-screen">
+      
+      {/* Menu */}
+      <nav className="flex gap-8 justify-center p-6 text-gray-300 text-sm">
+        <a href="#accueil" className="hover:text-sky-400">Accueil</a>
+        <a href="#apropos" className="hover:text-sky-400">À propos</a>
+        <a href="#competences" className="hover:text-sky-400">Compétences</a>
+        <a href="#projets" className="hover:text-sky-400">Projets</a>
+        <a href="#contact" className="hover:text-sky-400">Contact</a>
+      </nav>
+
+      {/* Accueil */}
+      <section id="accueil" className="text-center py-24 px-6">
+        <h1 className="text-5xl font-bold text-sky-400">Salut, je suis<br/>Wegang Kenmoe Brenda Aurélia</h1>
+        <p className="mt-3 text-lg text-gray-400">Étudiante en Cybersécurité / L1 Informatique</p>
+      </section>
+
+      {/* À propos */}
+      <section id="apropos" className="px-6 py-16 max-w-2xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4 text-sky-400">À propos</h2>
+        <p className="text-gray-300 leading-relaxed">
+          Étudiante passionnée par l'informatique et la cybersécurité. 
+          Je déteste les fraudes et je suis passionnée Par le hacking. 
+          Je me forme chaque jour pour comprendre, protéger et sécuriser 
+          les systèmes informatiques. Je fais beaucoup de pratique 
+          personnelle pour améliorer mes compétences.
+        </p>
+      </section>
+
+      {/* Compétences - Cartes bleu ciel */}
+      <section id="competences" className="px-6 py-16 max-w-2xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6 text-sky-400">Compétences</h2>
+        <div className="space-y-3">
+          <div className="bg-[#1a2f3a] p-4 rounded-lg flex items-center gap-3 border-sky-900/30 hover:border-sky-400 transition">
+            <span className="text-2xl">🐍</span>
+            <span>Python - Bases de programmation</span>
+          </div>
+          <div className="bg-[#1a2f3a] p-4 rounded-lg flex items-center gap-3 border-sky-900/30 hover:border-sky-400 transition">
+            <span className="text-2xl">🌐</span>
+            <span>HTML5 - Structure web</span>
+          </div>
+          <div className="bg-[#1a2f3a] p-4 rounded-lg flex items-center gap-3 border-sky-900/30 hover:border-sky-400 transition">
+            <span className="text-2xl">🎨</span>
+            <span>CSS3 - Design & Styles</span>
+          </div>
+          <div className="bg-[#1a2f3a] p-4 rounded-lg flex items-center gap-3 border-sky-900/30 hover:border-sky-400 transition">
+            <span className="text-2xl">💻</span>
+            <span>Linux - Terminal & Systèmes</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Projets */}
+      <section id="projets" className="px-6 py-16 max-w-2xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6 text-sky-400">Projets</h2>
+        <div className="bg-[#1a2f3a] border-sky-900/30 p-5 rounded-lg">
+          <h3 className="font-bold text-lg">Projet de l'école</h3>
+          <p className="text-sm text-sky-300 mb-2">Type projet: TP scolaire</p>
+          <p className="text-gray-300">Projet réalisé dans le cadre de ma formation L1 Informatique.</p>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="px-6 py-16 text-center">
+        <h2 className="text-3xl font-bold mb-6 text-sky-400">Contact</h2>
+        <div className="space-y-3 text-lg text-gray-300">
+          <p>📱 671 803 807</p>
+          <p>📧 brendaaurelia699@gmail.com</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-6 text-gray-500 text-sm border-t border-sky-900/30">
+        © 2026 Wegang Kenmoe Brenda Aurélia
+      </footer>
+
+    </main>
+  )
+}
+
